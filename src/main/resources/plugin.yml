@@ -1,0 +1,7 @@
+name: RyuZUPluginChatDiscord
+version: 1.0
+main: net.azisaba.ryuzupluginchatdiscord.RyuZUPluginChatDiscord
+api-version: 1.13
+depend:
+  - RyuZUPluginChat
+  - LunaChat
