@@ -12,18 +12,20 @@ java.toolchain.languageVersion.set(JavaLanguageVersion.of(8))
 repositories {
     mavenLocal()
     mavenCentral()
-    maven {
-        name = "papermc-repo"
-        url = uri("https://papermc.io/repo/repository/maven-public/")
-    }
+    maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://repo.azisaba.net/repository/maven-public/")
 }
 
 dependencies {
     val adventureVersion = "4.11.0"
     implementation("dev.kord:kord-core:0.13.1")
     implementation("org.slf4j:slf4j-simple:2.0.1")
-    compileOnly("net.azisaba:RyuZUPluginChat:4.5.1")
-    compileOnly("net.azisaba:lunachatplus:3.3.0")
+    compileOnly("net.azisaba:RyuZUPluginChat:4.5.1") {
+        exclude("co.aikar")
+    }
+    compileOnly("net.azisaba:lunachatplus:3.3.0") {
+        exclude("org.bstats")
+    }
     //noinspection VulnerableLibrariesLocal
     compileOnly("com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT")
     implementation("org.mariadb.jdbc:mariadb-java-client:3.0.8")
