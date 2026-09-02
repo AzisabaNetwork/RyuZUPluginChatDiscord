@@ -21,7 +21,7 @@ import org.bukkit.event.Listener
 class ChatListener(private val plugin: RyuZUPluginChatDiscord) : Listener {
     companion object {
         private val LEGACY_COMPONENT_SERIALIZER = LegacyComponentSerializer.builder()
-            .character('&')
+            .character('§')
             .extractUrls()
             .hexColors()
             .build()

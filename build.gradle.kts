@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.23"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.23"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("com.gradleup.shadow") version "8.3.0"
 }
 
 group = "net.azisaba"
