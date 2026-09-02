@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "net.azisaba"
-version = "1.0.0-SNAPSHOT"
+version = "1.0.1-SNAPSHOT"
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(8))
 
@@ -44,22 +44,20 @@ tasks {
 
     shadowJar {
         relocate("dev.kord.", "net.azisaba.ryuzupluginchatdiscord.libs.dev.kord.")
-        relocate("com.charleskorn.kaml", "net.azisaba.ryuzupluginchatdiscord.libs.com.charleskorn.kaml")
+        relocate("com.charleskorn.kaml.", "net.azisaba.ryuzupluginchatdiscord.libs.com.charleskorn.kaml.")
         relocate("kotlin.", "net.azisaba.ryuzupluginchatdiscord.libs.kotlin.")
-        relocate("io.ktor", "net.azisaba.ryuzupluginchatdiscord.libs.io.ktor")
-        //relocate("io.github", "net.azisaba.ryuzupluginchatdiscord.libs.io.github")
-        relocate("mu", "net.azisaba.ryuzupluginchatdiscord.libs.mu")
+        relocate("io.ktor.", "net.azisaba.ryuzupluginchatdiscord.libs.io.ktor.")
+        relocate("mu.", "net.azisaba.ryuzupluginchatdiscord.libs.mu.")
         exclude("org/slf4j/**")
-        relocate("co.touchlab", "net.azisaba.ryuzupluginchatdiscord.libs.co.touchlab")
-        relocate("org.jetbrains", "net.azisaba.ryuzupluginchatdiscord.libs.org.jetbrains")
-        relocate("org.intellij", "net.azisaba.ryuzupluginchatdiscord.libs.org.intellij")
-        relocate("org.mariadb", "net.azisaba.ryuzupluginchatdiscord.libs.org.mariadb")
-        relocate("net.kyori", "net.azisaba.ryuzupluginchatdiscord.libs.net.kyori")
+        relocate("co.touchlab.", "net.azisaba.ryuzupluginchatdiscord.libs.co.touchlab.")
+        relocate("org.jetbrains.", "net.azisaba.ryuzupluginchatdiscord.libs.org.jetbrains.")
+        relocate("org.intellij.", "net.azisaba.ryuzupluginchatdiscord.libs.org.intellij.")
+        relocate("org.mariadb.", "net.azisaba.ryuzupluginchatdiscord.libs.org.mariadb.")
+        relocate("net.kyori.", "net.azisaba.ryuzupluginchatdiscord.libs.net.kyori.")
         relocate("kotlinx.", "net.azisaba.ryuzupluginchatdiscord.libs.kotlinx.")
-        relocate("com.charleskorn.kaml", "net.azisaba.ryuzupluginchatdiscord.libs.com.charleskorn.kaml")
-        relocate("com.zaxxer", "net.azisaba.ryuzupluginchatdiscord.libs.com.zaxxer")
-        relocate("org.snakeyaml", "net.azisaba.ryuzupluginchatdiscord.libs.org.snakeyaml")
-        relocate("io.github.oshai.kotlinlogging", "net.azisaba.ryuzupluginchatdiscord.libs.io.github.oshai.kotlinlogging")
+        relocate("com.zaxxer.", "net.azisaba.ryuzupluginchatdiscord.libs.com.zaxxer.")
+        relocate("org.snakeyaml.", "net.azisaba.ryuzupluginchatdiscord.libs.org.snakeyaml.")
+        relocate("io.github.oshai.kotlinlogging.", "net.azisaba.ryuzupluginchatdiscord.libs.io.github.oshai.kotlinlogging.")
     }
 }
 
